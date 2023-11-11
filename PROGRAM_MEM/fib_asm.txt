@@ -1,0 +1,14 @@
+nop # sem op. antes da primeira batida do clock
+addi r1, r0, 0 # inicializando r1 com 0
+addi r2, r0, 1 # inicializando r2 com 1
+addi r3, r0, 15 # inicializando r3 com 15 ("n")
+show r3 # mostra "n"
+addi r4, r0, 0 # inicializa o contador em 0, e o guarda em r4
+add r5, r1, r2 # soma os valores em r1 e r2 e guarda a soma em r5 (soma dos últimos termos)
+show r5 # mostra a soma (número de Fibonacci)
+add r1, r2, r0 # guarda o valor de r2 em r1
+add r2, r5, r0 # guarda o valor de r5 (soma) em r2
+addi r4, r4, 1 # incrementa o contador em r4
+branch r3, r4, 2 # verifica se o contador é igual a "n" (condição para parar o loop)
+jump -6 # volta ao começo do loop
+halt # para a execução do programa
